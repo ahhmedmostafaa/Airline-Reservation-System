@@ -15,6 +15,10 @@ public class Frame extends JFrame implements ActionListener {
     JLabel label1 = new JLabel("Enter Username:");
     JLabel label2 = new JLabel("Enter your ID:");
 
+    // Login credentials — set your own values here before running
+    private static final String VALID_USERNAME = "admin";
+    private static final String VALID_ID = "YOUR_ID_HERE";
+
     public Frame()
     {
         // image of background
@@ -87,7 +91,7 @@ public class Frame extends JFrame implements ActionListener {
             String username = t1.getText();
             String id = new String(t2.getPassword());
 
-            if (username.equals("admin") && id.equals("6723"))
+            if (username.equals(VALID_USERNAME) && id.equals(VALID_ID))
             {
                 // display success message and show the new frame
                 JOptionPane.showMessageDialog(this, "Login Successful!");

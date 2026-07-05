@@ -67,12 +67,12 @@ mysql -u root -p < database/airline_database.sql
 
 **Application (login screen):**
 1. Place a `background.jpg` image next to `Frame.java`
-2. Compile and run:
+2. Open `Frame.java` and set your own `VALID_USERNAME` / `VALID_ID` values (near the top of the class)
+3. Compile and run:
 ```bash
 javac src/com/mycompany/frame/Frame.java
 java -cp src com.mycompany.frame.Frame
 ```
-Login with username `admin` and ID `6723` (hardcoded credentials from the original coursework version — see note below).
 
-## Note on credentials
-The login check in `Frame.java` uses a hardcoded username/ID (`admin` / `6723`) rather than checking against the database. This reflects the original state of the project as recovered; a production version should validate against the `SEATS_RESERVATION`/user data in the database instead.
+## Security Note
+Login credentials are defined as constants at the top of `Frame.java` and are redacted in this repository. Never commit real credentials to a public repository.
